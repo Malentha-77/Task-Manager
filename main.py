@@ -9,3 +9,11 @@ def add_task(task):
 if not name:
     print("Name cannot be empty.")
     return
+
+new_task = {
+
+        "name": name,
+        "completed": False
+    }
+
+tasks.append(new_task)
