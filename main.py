@@ -3,6 +3,10 @@ import json
 with open('tasks.json', 'r') as file:
     tasks = json.load(file)
 
+def show_tasks(tasks):
+    for task in tasks:
+        print(f"Name: {task['name']}, Completed: {task['completed']}")
+
 
 def save_tasks(tasks):
     with open("tasks.json", "w") as file:
