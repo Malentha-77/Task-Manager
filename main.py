@@ -7,6 +7,11 @@ def show_tasks(tasks):
     for task in tasks:
         print(f"Name: {task['name']}, Completed: {task['completed']}")
 
+def find_task(tasks, name):
+    for task in tasks:
+        if task["name"].lower() == name.lower():
+            return task
+    return None
 
 def save_tasks(tasks):
     with open("tasks.json", "w") as file:
