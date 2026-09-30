@@ -1,8 +1,7 @@
 import json
-from unicodedata import name
 
-with open('data.json', 'r') as file:
-    data = json.load(file)
+with open('tasks.json', 'r') as file:
+    tasks = json.load(file)
 
 def add_task(task):
     name = input("Enter name of task? ").strip()
