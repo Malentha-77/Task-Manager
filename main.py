@@ -31,3 +31,14 @@ def add_task(task):
 
     tasks.append(new_task)
     save_tasks(tasks)
+    print("Task added successfully. ")
+
+def mark_task_completed(tasks, name):
+    task = find_task(tasks, name)
+
+    if task:
+        task["completed"] = True
+        print("Task completed.")
+    else:
+        print("Task doesn't exist.")
+
