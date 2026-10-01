@@ -44,6 +44,7 @@ def mark_task_completed(tasks):
 
     if task:
         task["completed"] = True
+        save_tasks(tasks)
         print("Task completed.")
     else:
         print("Task doesn't exist.")
