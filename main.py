@@ -65,3 +65,30 @@ def remove_task(tasks):
         print("Task removed.")
     else:
         print("Task not found.")
+
+def menu(tasks):
+    choice = ""
+    while choice != "5":
+        print("\nTask Manager")
+        print("1. Show tasks")
+        print("2. Add task")
+        print("3. Mark task as completed")
+        print("4. Remove task")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            show_tasks(tasks)
+        elif choice == "2":
+            add_task(tasks)
+        elif choice == "3":
+            mark_task_completed(tasks)
+        elif choice == "4":
+            remove_task(tasks)
+        elif choice == "5":
+            print("Exited...")
+        else:
+            print("Invalid choice. Please try again.")
+
+menu(tasks)
