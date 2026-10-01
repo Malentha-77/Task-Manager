@@ -42,3 +42,21 @@ def mark_task_completed(tasks, name):
     else:
         print("Task doesn't exist.")
 
+
+def remove_task(tasks):
+    name = input("Enter name of task? ").strip()
+    
+    if not name:
+        print("Name cannot be empty.")
+        return
+    
+    task = find_task(tasks, name)
+
+    if task:
+        tasks.remove(task)
+        save_tasks(tasks)
+        print("Task removed.")
+    else:
+        print("Task not found.")
+
+    
