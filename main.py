@@ -33,7 +33,13 @@ def add_task(task):
     save_tasks(tasks)
     print("Task added successfully. ")
 
-def mark_task_completed(tasks, name):
+def mark_task_completed(tasks):
+    name = input("Enter name of task? ").strip()
+
+    if not name:
+        print("Name cannot be empty.")
+        return
+
     task = find_task(tasks, name)
 
     if task:
@@ -58,5 +64,3 @@ def remove_task(tasks):
         print("Task removed.")
     else:
         print("Task not found.")
-
-    
