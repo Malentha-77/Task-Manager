@@ -68,26 +68,32 @@ def remove_task(tasks):
 
 def menu(tasks):
     choice = ""
-    while choice != "5":
+    while choice != "6":
         print("\nTask Manager")
         print("1. Show tasks")
-        print("2. Add task")
-        print("3. Mark task as completed")
-        print("4. Remove task")
-        print("5. Exit")
+        print("2. Find task")
+        print("3. Add task")
+        print("4. Mark task as completed")
+        print("5. Remove task")
+        print("6. Exit")
 
         choice = input("Enter your choice: ")
 
         if choice == "1":
             show_tasks(tasks)
+
         elif choice == "2":
-            add_task(tasks)
+            find_task(tasks)
+
         elif choice == "3":
             mark_task_completed(tasks)
+
         elif choice == "4":
             remove_task(tasks)
-        elif choice == "5":
+
+        elif choice == "6":
             print("Exited...")
+            
         else:
             print("Invalid choice. Please try again.")
 
