@@ -32,7 +32,7 @@ def save_tasks(tasks):
     with open("tasks.json", "w") as file:
         json.dump(tasks, file, indent=4)
 
-def add_task(task):
+def add_task(tasks):
     name = input("Enter name of task? ").strip()
 
     if not name:
