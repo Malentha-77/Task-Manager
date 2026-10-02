@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "name": "Learn Python",
+        "completed": true
+    },
+    {
+        "name": "Finish Task Manager",
+        "completed": false
+    }
+]
