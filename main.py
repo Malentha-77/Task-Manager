@@ -13,6 +13,21 @@ def find_task(tasks, name):
             return task
     return None
 
+def find_and_display_task(tasks):
+    name = input("Enter name of task? ")
+    
+    if not name:
+        print("Name cannot be empty.")
+        return
+
+    task = find_task(tasks, name)
+
+    if task:
+        print(task)
+
+    else:
+        print("Task not found.")
+       
 def save_tasks(tasks):
     with open("tasks.json", "w") as file:
         json.dump(tasks, file, indent=4)
@@ -83,12 +98,15 @@ def menu(tasks):
             show_tasks(tasks)
 
         elif choice == "2":
-            find_task(tasks)
+            find_and_display_task(tasks)
 
         elif choice == "3":
+            add_task(tasks)
+        
+        elif choice == "4":
             mark_task_completed(tasks)
 
-        elif choice == "4":
+        elif choice == "5":
             remove_task(tasks)
 
         elif choice == "6":
